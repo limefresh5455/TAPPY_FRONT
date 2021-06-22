@@ -2,7 +2,7 @@
   "providers": [
     "awscloudformation"
   ],
-  "projectName": "tappyfront",
+  "projectName": "TAPPYFRONT",
   "version": "3.1",
   "frontend": "javascript",
   "javascript": {
