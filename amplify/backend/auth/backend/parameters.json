@@ -1,8 +1,8 @@
 {
     "identityPoolName": "testAuthIdentityPool",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "tappyf66e9995a",
-    "userPoolName": "tappyfront",
+    "resourceNameTruncated": "backen6c028a65",
+    "userPoolName": "backend",
     "autoVerifiedAttributes": [
         "email"
     ],
@@ -12,11 +12,16 @@
     ],
     "smsAuthenticationMessage": "Your authentication code is {####}",
     "smsVerificationMessage": "Your verification code is {####}",
-    "emailVerificationSubject": "Your verification code",
-    "emailVerificationMessage": "Your verification code is {####}",
+    "emailVerificationSubject": "Forgot password code: {####}",
+    "emailVerificationMessage": "Forgot password code: {####}",
     "defaultPasswordPolicy": false,
     "passwordPolicyMinLength": 8,
-    "passwordPolicyCharacters": [],
+    "passwordPolicyCharacters": [
+        "Requires Lowercase",
+        "Requires Numbers",
+        "Requires Symbols",
+        "Requires Uppercase"
+    ],
     "requiredAttributes": [
         "preferred_username"
     ],
@@ -24,10 +29,10 @@
     "userpoolClientRefreshTokenValidity": 30,
     "userpoolClientWriteAttributes": [],
     "userpoolClientReadAttributes": [],
-    "userpoolClientLambdaRole": "tappyf66e9995a_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "backen6c028a65_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "66e9995a",
-    "resourceName": "tappyfront",
+    "sharedId": "6c028a65",
+    "resourceName": "backend",
     "authSelections": "identityPoolAndUserPool",
     "authRoleArn": {
         "Fn::GetAtt": [
@@ -42,11 +47,12 @@
         ]
     },
     "serviceName": "Cognito",
-    "useDefault": "default",
+    "useDefault": "manual",
     "userPoolGroups": false,
     "userPoolGroupList": [],
     "adminQueries": false,
+    "thirdPartyAuth": false,
+    "authProviders": [],
     "usernameCaseSensitive": false,
-    "dependsOn": [],
-    "authProviders": []
+    "dependsOn": []
 }
